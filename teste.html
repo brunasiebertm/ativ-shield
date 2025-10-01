@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+            <ul>
+              <li>
+                <a href="#">Team</a>
+              </li>
+              <li>
+                <a href="#">History about team</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Join Us</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Título</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore rem ex
+      molestias provident? Quis, quos eius laborum reiciendis quidem, quaerat
+      officiis accusamus odit magnam maxime est, consequatur perspiciatis
+      officia natus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Ad, nesciunt. Atque provident maiores quasi porro non vel deleniti, dolore
+      deserunt, tempora consequuntur perferendis quisquam tenetur, dolores
+      ullam. Quod, molestiae nesciunt.
+    </p>
+
+        <p id="btn-modal">abrir modal
+        </p>
+        
+
+
+    <div id="modal">
+        <div>
+            <h2>
+                Janela modal
+            </h2>
+            <p>
+                Conteúdo modal
+            </p>
+        </div>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      nav ul {
+        display: flex;
+      }
+      nav ul li {
+        margin: 1.2vw;
+      }
+      nav ul li ul {
+        display: none;
+      }
+      nav ul li a {
+        color: black;
+        border-bottom: 2px solid;
+      }
+
+      nav ul li:hover ul {
+        display: block;
+        background-color: rgb(214, 247, 247);
+        border-radius: 10px;
+        padding: 1vw;
+        position: absolute;
+        margin-top: 0.5vw;
+      }
+      nav ul li a:hover {
+        color: black;
+        transition: 1s;
+      }
+      div#modal{
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.329);
+        display: none;
+      }
+      div#modal div{
+        background: white;
+        margin: 25vh 25vw;
+      }
+    </style>
+    <script>
+        let btnModal = document.getElementById
+        ("btn-modal"); 
+        let modal = document.getElementById("modal")
+        btnModal.addEventListener("click",function(){
+            console.log("Foi!");
+         modal.style.display="block";
+        });
+        modal.addEventListener("click",function(){
+            modal.style.display="none"
+        })
+    </script>
+    
+  </body>
+</html>
